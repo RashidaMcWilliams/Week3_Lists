@@ -41,25 +41,66 @@ namespace Week3_Lists
 
             for(int i=0; i<favFilms.Count; i++)
             {
-                Console.WriteLine(favFilms[i]);
+                //Console.WriteLine(favFilms[i]);
             }
             favFilms.Insert(2, "Whale Rider");
             favFilms.Insert(0, "Star Trek 2: The Wrath of Khan");
             favFilms.Insert(1, "Arrival");
-            Console.WriteLine();
+            //Console.WriteLine();
 
             foreach(string film in favFilms)
             {
-                Console.WriteLine(film);
+                //Console.WriteLine(film);
             }
 
             favFilms.Remove("Arrival");
-            Console.WriteLine();
+            //Console.WriteLine();
 
             foreach(string film in favFilms)
             {
-                Console.WriteLine(film);
+                //Console.WriteLine(film);
             }
+
+            List<string> animals = new List<string>();
+            animals.Add("platypus");
+            animals.Add("otter");
+            animals.Add("kangaroo");
+            animals.Add("opossum");
+            animals.Add("trash panda");
+
+            foreach(string animal in animals)
+            {
+                Console.WriteLine(animal);
+            }
+
+            List<bool> boolList = new List<bool>() { true, false, false, true, false };
+
+            foreach(bool booly in boolList)
+            {
+                if (booly == true)
+                {
+                    Console.WriteLine("Better bring an umbrella.");
+                }
+                else
+                {
+                    Console.WriteLine("No rain today, enjoy the sun!");
+                }
+
+            }
+
+            List<int> numbers = new List<int>() { 1, 23, 9, 77, 922, 6, 32, 63, 14, 5 };
+            Console.WriteLine(numbers.Contains(23));
+            Console.WriteLine(numbers.Contains(77));
+            Console.WriteLine(numbers.Contains(15));
+
+            numbers.Remove(27);
+            numbers.Remove(77);
+            numbers.Remove(32);
+            numbers.Remove(6);
+
+            Console.WriteLine(numbers.Contains(23));
+            Console.WriteLine(numbers.Contains(77));
+            Console.WriteLine(numbers.Contains(15));
 
         }
     }
